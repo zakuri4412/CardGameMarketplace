@@ -1,5 +1,6 @@
 package com.example.cardgamemarket.data.database.Card;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -22,6 +23,15 @@ public interface CardDAO {
     @Query("SELECT * FROM cards WHERE seller_id = :sellerId")
     List<CardEntity> getCardBySeller(int sellerId);
 
+    @Query("Select * from cards where name= :name")
+    List<CardEntity> getCardByName(String name);
+
     @Query("SELECT * FROM cards")
     List<CardEntity> getListCard();
+
+    @Query("SELECT * FROM cards ORDER BY price DESC LIMIT 5")
+    LiveData<List<CardEntity>> getTop5Cards();
+
+    @Query("SELECT * FROM cards WHERE name LIKE :query")
+    LiveData<List<CardEntity>> searchCards(String query);
 }

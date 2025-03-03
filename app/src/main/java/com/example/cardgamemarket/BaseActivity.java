@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.LayoutRes;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -16,14 +17,12 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class BaseActivity extends AppCompatActivity {
     protected TextView headerTextView;
-    protected ConstraintLayout mainLayout; // Layout chính chứa header + nội dung
+    protected ConstraintLayout mainLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base); // Dùng layout XML có header
-
-        // Ánh xạ các view
+        setContentView(R.layout.activity_base);
         headerTextView = findViewById(R.id.header_text);
         mainLayout = findViewById(R.id.main);
     }
