@@ -44,6 +44,10 @@ public class PokemonCard {
         return images.small;
     }
 
+    public String getBigImages() {
+        return images.large;
+    }
+
     public static class Attack {
     private String name;
     private List<String> cost;

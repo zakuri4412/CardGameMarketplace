@@ -5,6 +5,82 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:translationY="-100dp"
     tools:context=".DetailActivity">
 
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="#BCBCBC"
+        app:layout_constraintBottom_toTopOf="@+id/cardName_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/bigImageView"
+            android:layout_width="232dp"
+            android:layout_height="319dp"
+            android:translationX="90dp"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/cardName_txt"
+        android:layout_width="232dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/avater"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sellerName_txt"
+        android:layout_width="173dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="180dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/avater" />
+
+    <TextView
+        android:id="@+id/sellerPrice_txt"
+        android:layout_width="146dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="44dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sellerName_txt"
+        app:layout_constraintStart_toEndOf="@+id/cardName_txt" />
+
+    <ImageView
+        android:id="@+id/avater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="164dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="205dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="29dp"
+        android:backgroundTint="#D0AA49"
+        android:text="Buy It now"
+        android:textAlignment="center"
+        android:textColor="#1A1818"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#312E2E" />
 </androidx.constraintlayout.widget.ConstraintLayout>
