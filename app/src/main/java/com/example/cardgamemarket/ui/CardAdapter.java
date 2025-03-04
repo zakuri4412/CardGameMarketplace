@@ -42,6 +42,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
+        ViewGroup.LayoutParams layoutParams = holder.itemView.getLayoutParams();
+        layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        holder.itemView.setLayoutParams(layoutParams);
         CardEntity card = cardList.get(position);
         holder.nameTextView.setText(card.name);
         holder.priceTextView.setText("Price: $" + card.price);
